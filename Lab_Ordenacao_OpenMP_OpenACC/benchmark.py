@@ -6,7 +6,7 @@ from pathlib import Path
 
 # Ajuste se necessario. n deve ser divisivel por p.
 TAMANHOS = [8192, 32768, 131072]
-BLOCOS = [1, 2, 4, 8, 16]
+BLOCOS = [1, 2, 4, 8]
 REPETICOES = 3
 SEMENTE = 42
 

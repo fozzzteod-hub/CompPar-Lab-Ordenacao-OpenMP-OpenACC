@@ -45,7 +45,7 @@ gcc -O3 -Wall -Wextra -fopenmp -fopenacc ordenacao.c -o ordenacao
 python3 benchmark.py
 ```
 
-Gera `resultados/tempos.csv` (execuções individuais) e `resultados/medias.csv` (médias, speedup e eficiência). São usados n=8192,32768,131072; p=1,2,4,8,16 e três repetições. O script interrompe diante de erros; não registra fallback CPU como GPU. A região medida inclui alocação auxiliar, fases do algoritmo e transferências OpenACC; exclui geração de entrada, validação e inicialização prévia do contexto OpenACC. Usa tempo de parede comum via omp_get_wtime para a comparação e registra clock() separadamente, especialmente para a referência serial. Não usar tempo de CPU para comparar CPU multithread com GPU.
+Gera `resultados/tempos.csv` (execuções individuais) e `resultados/medias.csv` (médias, speedup e eficiência). São usados n=8192,32768,131072; p=1,2,4,8 e três repetições. O script interrompe diante de erros; não registra fallback CPU como GPU. A região medida inclui alocação auxiliar, fases do algoritmo e transferências OpenACC; exclui geração de entrada, validação e inicialização prévia do contexto OpenACC. Usa tempo de parede comum via omp_get_wtime para a comparação e registra clock() separadamente, especialmente para a referência serial. Não usar tempo de CPU para comparar CPU multithread com GPU.
 
 ## Estratégias
 
